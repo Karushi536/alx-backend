@@ -5,6 +5,7 @@ FIFOCache module
 
 from base_caching import BaseCaching
 
+
 class FIFOCache(BaseCaching):
     """
     FIFOCache is a caching system that

@@ -5,6 +5,7 @@ LFUCache module
 
 from base_caching import BaseCaching
 
+
 class LFUCache(BaseCaching):
     """
     LFUCache is a caching system that uses LFU
@@ -40,10 +41,12 @@ class LFUCache(BaseCaching):
                 if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                     # Find the least frequently used item
                     min_freq = min(self.usage_count.values())
-                    lfu_keys = [k for k, v in self.usage_count.items() if v == min_freq]
+                    lfu_keys = [
+                        k for k, v in self.usage_count.items() if v == min_freq]
                     if len(lfu_keys) > 1:
                         # If there's a tie, use LRU to break the tie
-                        lfu_key = min(lfu_keys, key=lambda k: self.usage_order[k])
+                        lfu_key = min(
+                            lfu_keys, key=lambda k: self.usage_order[k])
                     else:
                         lfu_key = lfu_keys[0]
 

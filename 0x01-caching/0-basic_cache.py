@@ -5,6 +5,7 @@ BasicCache module
 
 from base_caching import BaseCaching
 
+
 class BasicCache(BaseCaching):
     """
     BasicCache is a caching system with no limit.
