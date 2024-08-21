@@ -21,7 +21,8 @@ class MRUCache(BaseCaching):
         """
         Add an item to the cache.
         If key or item is None, this method does nothing.
-        If the cache exceeds the MAX_ITEMS limit, discard the most recently used item.
+        If the cache exceeds the MAX_ITEMS limit,
+        discard the most recently used item.
         """
         if key is not None and item is not None:
             if key in self.cache_data:
@@ -38,7 +39,8 @@ class MRUCache(BaseCaching):
         """
         Get an item by key.
         If key is None or doesn't exist, return None.
-        Update the item's position in the usage order as it is now the most recently used.
+        Update the item's position in the usage order
+        as it is now the most recently used.
         """
         if key in self.cache_data:
             self.usage_order.remove(key)

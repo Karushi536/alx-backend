@@ -7,8 +7,10 @@ from base_caching import BaseCaching
 
 class LFUCache(BaseCaching):
     """
-    LFUCache is a caching system that uses LFU (Least Frequently Used) algorithm.
-    If multiple items have the same usage frequency, the LRU (Least Recently Used)
+    LFUCache is a caching system that uses LFU
+    (Least Frequently Used) algorithm.
+    If multiple items have the same usage frequency,
+    the LRU (Least Recently Used)
     algorithm is used to determine which item to discard.
     """
 
@@ -24,7 +26,8 @@ class LFUCache(BaseCaching):
         """
         Add an item to the cache.
         If key or item is None, this method does nothing.
-        If the cache exceeds the MAX_ITEMS limit, discard the least frequently used item.
+        If the cache exceeds the MAX_ITEMS limit,
+        discard the least frequently used item.
         If there is a tie, discard the least recently used item.
         """
         if key is not None and item is not None:

@@ -21,7 +21,8 @@ class LIFOCache(BaseCaching):
         """
         Add an item to the cache.
         If key or item is None, this method does nothing.
-        If the cache exceeds the MAX_ITEMS limit, discard the last item added (LIFO).
+        If the cache exceeds the MAX_ITEMS limit,
+        discard the last item added (LIFO).
         """
         if key is not None and item is not None:
             if len(self.cache_data) >= BaseCaching.MAX_ITEMS and key not in self.cache_data:

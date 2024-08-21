@@ -7,7 +7,8 @@ from base_caching import BaseCaching
 
 class FIFOCache(BaseCaching):
     """
-    FIFOCache is a caching system that uses FIFO (First-In-First-Out) algorithm.
+    FIFOCache is a caching system that
+    uses FIFO (First-In-First-Out) algorithm.
     """
 
     def __init__(self):
@@ -21,7 +22,8 @@ class FIFOCache(BaseCaching):
         """
         Add an item to the cache.
         If key or item is None, this method does nothing.
-        If the cache exceeds the MAX_ITEMS limit, discard the first item added (FIFO).
+        If the cache exceeds the MAX_ITEMS limit,
+        discard the first item added (FIFO).
         """
         if key is not None and item is not None:
             if key in self.cache_data:
@@ -30,7 +32,7 @@ class FIFOCache(BaseCaching):
                 first_key = self.order.pop(0)
                 del self.cache_data[first_key]
                 print(f"DISCARD: {first_key}")
-            
+
             self.cache_data[key] = item
             self.order.append(key)
 
