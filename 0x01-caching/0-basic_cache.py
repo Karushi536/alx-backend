@@ -20,7 +20,7 @@ class BasicCache(BaseCaching):
 
     def get(self, key):
         """
-            Get an item by key.
-            If key is None or doesn't exist, return None.
+        Get an item by key.
+        If key is None or doesn't exist, return None.
         """
         return self.cache_data.get(key, None)
