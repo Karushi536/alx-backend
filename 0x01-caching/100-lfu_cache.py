@@ -42,7 +42,8 @@ class LFUCache(BaseCaching):
                     # Find the least frequently used item
                     min_freq = min(self.usage_count.values())
                     lfu_keys = [
-                        k for k, v in self.usage_count.items() if v == min_freq]
+                        k for k, v in self.usage_count.items()
+                        if v == min_freq]
                     if len(lfu_keys) > 1:
                         # If there's a tie, use LRU to break the tie
                         lfu_key = min(

@@ -8,7 +8,8 @@ from base_caching import BaseCaching
 
 class LIFOCache(BaseCaching):
     """
-    LIFOCache is a caching system that uses LIFO (Last-In-First-Out) algorithm.
+    LIFOCache is a caching system that uses
+    LIFO (Last-In-First-Out) algorithm.
     """
 
     def __init__(self):
